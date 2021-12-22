@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Editor</title>
+    <!-- Fontawesom -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Master styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-content">
+      <!-- Text Editor Header -->
+
+      <div class="text-editor-header">
+        <button class="btn" data-element="bold">
+          <i class="fa fa-bold"></i>
+        </button>
+        <button class="btn" data-element="italic">
+          <i class="fa fa-italic"></i>
+        </button>
+        <button class="btn" data-element="underline">
+          <i class="fa fa-underline"></i>
+        </button>
+        <button class="btn" data-element="insertUnorderedList">
+          <i class="fa fa-list-ul"></i>
+        </button>
+        <button class="btn" data-element="insertOrderedList">
+          <i class="fa fa-list-ol"></i>
+        </button>
+        <button class="btn" data-element="createLink">
+          <i class="fa fa-link"></i>
+        </button>
+        <button class="btn" data-element="justifyLeft">
+          <i class="fa fa-align-left"></i>
+        </button>
+        <button class="btn" data-element="justifyCenter">
+          <i class="fa fa-align-center"></i>
+        </button>
+        <button class="btn" data-element="justifyRight">
+          <i class="fa fa-align-right"></i>
+        </button>
+        <button class="btn" data-element="justifyFull">
+          <i class="fa fa-align-justify"></i>
+        </button>
+        <button class="btn" data-element="insertImage">
+          <i class="fa fa-image"></i>
+        </button>
+      </div>
+
+      <!-- End of Text Editor Header -->
+
+      <!-- Content -->
+
+      <div class="content" contenteditable="true"></div>
+
+      <!-- End of Content -->
+    </div>
+
+    <div class="cta-btn flex w-100 mx-auto justify-between gap-x-8">
+      <button class="export html">
+        <i class="fas fa-file-export"></i> Export HTML
+      </button>
+      <button class="export text">
+        <i class="fas fa-file-export"></i> Export Text
+      </button>
+      <button class="export mkd-text">
+        <i class="fas fa-file-export"></i> Export mkd to text
+      </button>
+      <button class="export mkd-html">
+        <i class="fas fa-file-export"></i> Export mkd to html
+      </button>
+    </div>
+
+    <div class="exported">
+      Exported will appear here, click the button above to export.
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>

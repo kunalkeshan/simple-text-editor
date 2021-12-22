@@ -1,0 +1,51 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    gap: 1em;
+}
+
+.main-content,
+.exported{
+    width: clamp(300px, 100%, 500px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.text-editor-header{
+    background: #ecf0f1;
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn,
+.export{
+    all: unset;
+    cursor: pointer;
+    color: #0008;
+    transition: all 500ms;
+}
+
+.btn:hover,
+.export:hover{
+    color: #000;
+}
+
+.content,
+.exported{
+    min-height: 200px;
+    border: solid 1px #ecf0f1;
+    padding: 1em;
+    outline: none;
+}
