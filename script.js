@@ -2,11 +2,6 @@ const btns = document.querySelectorAll(".btn");
 const exportBtns = document.querySelectorAll(".export");
 const exportedContainer = document.querySelector(".exported");
 const contentContainer = document.querySelector(".content");
-
-const randomMD = "# h1\n## h2";
-const output = marked.parse(randomMD)
-console.log(output)
-
 contentContainer.innerHTML = ""
 
 btns.forEach((btn) => {
@@ -40,6 +35,5 @@ exportBtns.forEach((exportBtn) => {
             exportedContainer.innerHTML = marked.parse(content)
             
         }
-        console.log(content)
     })
 })
